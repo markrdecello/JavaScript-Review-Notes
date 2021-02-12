@@ -567,4 +567,685 @@ console.log("Example 51 - Complete\n\tproduct3 = " + product3);
 /*-------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------*/
 
+/*
+    Create a function addFive without any arguments. This function adds 5 to the sum variable, but its
+    returned value is undefined
+*/
+var sum = 0;
+const addThree = () => {
+    sum = sum + 3;
+}
+const addFive = () => {
+    sum = sum + 5;
+}
+var aThree = addThree()
+var aFive = addFive()
+console.log("Example 52 - Complete\n\taThree = " + aThree + ", aFive = " + aFive);
 
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Call the processArg function with an argument of 7 and assign its return to the variable processed.
+*/
+var processed = 0;
+
+const processArg = (num) => {
+    return (num + 3) / 5;
+}
+processed = processArg(7);
+console.log("Example 53 - Complete\n\tprocessed = " + processed);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+    /*
+        In Computer Science a queue is an abstract Data Structure where items are kept n order.
+        New items can be added at the back of the queue and old items are taken off from the
+        front of th queue.
+    */
+/*
+    Write a function nextInLine which takes an array (arr) and a number (item) as arguments. Add
+    the number to the end of the array, then remove the first element of the array. the nextInLine
+    function should then return the element that was removed.
+*/
+const nextInLine = (arr, item) => {
+    arr.push(item);
+    item = arr.shift();
+    return item;
+}
+
+var testArr = [1, 2, 3, 4, 5];
+
+console.log("Example 54 - Complete")
+console.log("\tBefore: " + JSON.stringify(testArr));
+console.log("\t" + nextInLine(testArr, 6));
+console.log("\tAfter: " + JSON.stringify(testArr));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Modify the welcomeToBooleans function so that it returns true isntead of false when the run button is clicked
+*/
+const welcomeToBooleans = () => {
+
+    //return false;
+    return true;
+}
+console.log("Example 55 - Complete\n\t" + welcomeToBooleans());
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Create an if statement inside the function to return "Yes, that was true" if the parameter wasThatTrue is true
+    and return "No, that was false"
+*/
+const trueOrFalse = (wasThatTrue) => {
+    if (wasThatTrue) {
+        return "Yes, that was true";
+    } else {
+        return "No, that was false";
+    }
+}
+console.log("Example 56 - Complete\n\t" + trueOrFalse(false));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the equality operator to the indicated line so that the function will return "Equal" when val
+    is equivalent to 12
+*/
+const testEqual = (val) => {
+    if (val == 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+console.log("Example 57 - Complete\n\ttestEqual = " + testEqual(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Use the strict equality in the if statement so the function will return "Equal" when
+    val is strictly equal to 7
+        *** 3 === 3   // true becasue JavaScript performs type conversion from string to number
+        *** 3 === '3' // false because the types are different and type conversion is not performed
+*/
+const testStrict = (val) => {
+    if (val === 7) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+console.log("Example 58 - Complete\n\ttestStrict : " + testStrict(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    The compareEquality function in the editor compares two values using the equality operator. 
+    Modify the function so that it returns "Equal" only when the values are strictly equal.
+        *** typeof 3    // returns 'number'
+        *** typeof '3'  // returns 'string'
+        *** In JavaScript, you can determine the type of a variable or a value with the
+            typeof operator
+*/
+const compareEquality = (a, b) => {
+    if (a === b) {
+        return "Equal";
+    }
+    return "Not Equal";
+}
+console.log("Example 59 - Complete\n\tcompareEquality : " + compareEquality(10, "10"));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the inequality operator != in the if statment so that the function will return "Not Equal"
+    when val is not equivalent to 99
+*/
+const testNotEqual = (val) => {
+    if (val != 99) {
+        return "Not Equal";
+    }
+    return "Equal";
+}
+console.log("Example 60 - Complete\n\ttestNotEqual : " + testNotEqual(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the strict inequality operator to the if statement so the function will return "Not Equal" 
+    when val is not strictly equal to 17
+*/
+const testStrictNotEqual = (val) => {
+    if (val !== 17) {
+        return "Not Equal";
+    }
+    return "Equal";
+}
+console.log("Example 61 - Complete\n\ttestStrictNotEqual : " + testStrictNotEqual(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the greater than operator to the indicated lines so that the return statments make sense.
+*/
+const testGreaterThan = (val) => {
+    if (val > 100) {
+        return "Over 100";
+    }
+    if (val > 10) {
+        return "Over 10";
+    }
+    return "10 or Under";
+}
+console.log("Example 62 - Complete\n\ttestGreateThan : " + testGreaterThan(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the greater than or equal to operator to the indicated lines so that the return statements make sense
+*/
+const testGreaterOrEqual = (val) => {
+    if (val >= 20) {
+        return "20 or Over";
+    }
+    if (val >= 10) {
+        return "10 or Over";
+    }
+    return "Less than 10";
+}
+console.log("Example 63 - Complete\n\ttestGreaterOrEqual : " + testGreaterOrEqual(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the less than operator to the indicated lines so that the return statements make sense
+*/
+const testLessThan = (val) => {
+    if (val < 25) {
+        return "Under 25";
+    }
+    if (val < 55) {
+        return "Under 55";
+    }
+    return "55 or Over";
+}
+console.log("Example 64 - Complete\n\ttestLessThan : " + testLessThan(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the less than or equal to operator to the indicated lines so that the return statements make sense
+*/
+
+const testLessOrEqual = (val) => {
+    if (val <= 12) {
+        return "Smaller Than or Equal to 12";
+    }
+    if (val <= 24) {
+        return "Smaller Than or Equal to 24";
+    }
+    return "More Than 24";
+}
+console.log("Example 65 - Complete\n\ttestLessOrEqual : " + testLessOrEqual(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Replace the two if statements with one statement, using the && operator, which will return "Yes" 
+    if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return "No"
+*/
+const testLogicalAnd = (val) => {
+    /*if (val) {
+        if (val) {
+            return "Yes";
+    }*/
+    if (val <= 50 && val >= 25) {
+        return "Yes";
+    }
+    return "No";
+}
+console.log("Example 66 - Complete\n\ttestLogicalAnd : " + testLogicalAnd(25));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Combine the two if statements into one statement which returns "Outside" if val is not
+    between 10 and 20, inclusive. Otherwise, return "Inside".
+*/
+const testLogicalOr = (val) => {
+    /*
+    if (val) {
+        return "Outside";
+    }
+    if (val) {
+        return "Outside";
+    }
+    */
+    if (val < 10 || val > 20) {
+        return "Outside";
+    }
+    return "Inside";
+}
+console.log("Example 67 - Complete\n\ttestLogicalOr : " + testLogicalOr(15));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Combine the if statements into a single if/else statement
+*/
+const testElse = (val) => {
+    var result = "";
+    /*if (val > 5) {
+        result = "Bigger than 5";
+    }
+    if (val <= 5) {
+        result = "5 or smaller";
+    }*/
+    if (val > 5) {
+        result = "Bigger than 5";
+    } else {
+        result = "5 or smaller;"
+    }
+    return result;
+}
+console.log("Example 68 - Complete\n\ttestElse : " + testElse(4));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Convert the logic to use else if statements
+*/
+const testElseIf = (val) => {
+    /*if ( val > 10 ) {
+        return "Greater than 10";
+    }
+    if ( val < 5 ) {
+        return "Smaller than 5";
+    }*/
+    if ( val > 10 ) {
+        return "Greater than 10";
+    } else if ( val < 5 ) {
+        return "Smaller than 5";
+    } else {
+        return "Bewteen 5 and 10";
+    }
+    //return "Between 5 and 10";
+}
+console.log("Example 69 - Complete\n\ttestElseIf : " + testElseIf(7));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Change the order of logic in the function so that it will return the correct statements in all cases
+*/
+const orderMyLogic = (val) => {
+    /*if ( val < 10 ) {
+        return "Less than 10";
+    } else if ( val < 5 ) {
+        return "Less than 5";
+    } else {
+        return "Greater than or equal to 10";
+    }*/
+    if ( val < 5 ) {
+        return "Less than 5";
+    } else if ( val < 10 ) {
+        return "Less than 10";
+    } else {
+        return "Greater than or equal to 10";
+    }
+}
+console.log("Exampel 70 - Complete\n\torderMyLogic : " + orderMyLogic(7));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Write chained if/else if statements to fulfill the following conditions:
+        num < 5     - return "Tiny"
+        num < 10    - return "Small"
+        num < 15    - return "Medium"
+        num < 20    - return "Large"
+        num >= 20   - return "Huge" 
+*/
+const testSize = (num) => {
+    if ( num < 5) {
+        return "Tiny";
+    } else if ( num < 10 ) {
+        return "Small";
+    } else if ( num < 15 ) {
+        return "Medium";
+    } else if ( num < 20 ) {
+        return "Large";
+    } else if ( num >= 20 ) {
+        return "Huge";
+    } else {
+        return "Change Me";
+    }
+}
+console.log("Example 71 - Complete\n\ttestSize : " + testSize(7));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+                                        Golf Code
+    In the game of golf each hole has a par meaning the average number of strokes a golfer is expected 
+    to make in order to sink the ball in a hole to complete the play. Depending on how far above or below 
+    par your strokes are, there is a different nickname.
+    Your function will be passed par and strokes argument. Return the corect string according to this table 
+    which lists the strokes in order of priority; top (highest) to bottom (lowest):
+      __________________________________
+      |____Strokes___|_____Return______|
+      |       1      |  "Hole-in-one!" |
+      |  <= par - 2  |     "Eagle"     |
+      |    par - 1   |     "Birdie"    |
+      |      par     |      "Par"      |
+      |    par + 1   |     "Bogey"     |
+      |    par + 2   |  "Double Bogey" |
+      |__>= par + 3__|____"Go Home!"___|
+
+    par and strokes will always be numberic and positive. 
+*/
+var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+const golfScore = (par, strokes) => {
+    if (strokes == 1) {
+        return names[0];
+    } else if (strokes <= par - 2) {
+        return names[1];
+    } else if (strokes == par - 1) {
+        return names[2];
+    } else if (strokes == par) {
+        return names[3];
+    } else if (strokes == par + 1) {
+        return names[4];
+    } else if (strokes == par + 2) {
+        return names[5];
+    } else if (strokes >= par + 3) {
+        return names[6];
+    } else {
+        return "Change Me";
+    }
+
+    //return "Change Me"
+}
+console.log("Example 72 - Complete\n\tgolfScore : " + golfScore(5, 4));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Write a switch statement which tests val and sets answer for the following conditions:
+        1 - "alpha"
+        2 - "beta"
+        3 - "gamma"
+        4 - "delta"
+*/
+const caseInSwitch = (val) => {
+    switch(val){
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+        default:
+            answer = "Unknown";
+            break;
+    }
+    return answer;
+}
+console.log("Example 73 - Complete\n\tcaseInSwitch : " + caseInSwitch(2));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+ *   Write a switch statement to set answer2 for the following conditions:
+ *       "a" - "apple"
+ *       "b" - "bird"
+ *       "c" - "cat"
+ *       default - "stuff"
+ */
+const switchOfStuff = (val) => {
+    var answer2 = "";
+    switch (val) {
+        case "a":
+            answer2 = "apple";
+            break;
+        case "b":
+            answer2 = "bird";
+            break;
+        case "c":
+            answer2 = "cat";
+            break;
+        default:
+            answer2 = "stuff";
+    }
+    return answer2;
+}
+console.log("Example 74 - Complete\n\tswitchOfStuff : " + switchOfStuff("c"));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Write a switch statement to set answer3 for te following ranges:
+        1-3 : "Low"
+        4-6 : "Mid"
+        7-9 : "High"
+*/
+const sequentialSizes = (val) => {
+    var answer3 = "";
+    switch (val) {
+        case 1:
+        case 2:
+        case 3:
+            answer3 = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer3 = "Mid";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer3 = "High";
+            break;
+        default:
+            answer3 = "Unknown";
+            break;
+    }
+    return answer3;
+}
+console.log("Example 75 - Complete\n\tsequentialSizes : " + sequentialSizes(1));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Change the chained if/else if statements into a switch statement
+*/
+const chainToSwitch = (val) => {
+    var answer4 = "";
+
+    /*if (val === "bob") {
+        answer4 = "Marley";
+    } else if (val === 42) {
+        answer4 = "The Answer";
+    } else if (val === 1) {
+        answer = "There is no #1";
+    } else if (val === 99) {
+        answer4 = "Missed me by this much!";
+    } else if (val === 7) {
+        answer4 = "Ate Nine";
+    }*/
+    switch (val) {
+        case "bob":
+            answer4 = "Marley";
+            break;
+        case 42:
+            answer4 = "The Answer";
+            break;
+        case 1:
+            answer4 = "There is no #1";
+            break;
+        case 99:
+            answer4 = "Missed me by this much!";
+            break;
+        case 7:
+            answer4 = "Ate Nine";
+            break;
+        default:
+            answer4 = "Unknown";
+            break;
+    }
+    return answer4;
+}
+console.log("Example 76 - Complete\n\tchainToSwitch : " + chainToSwitch(7));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Fix the function isLess to remove the if/else statements
+        *** === returns true or false
+*/
+const isLess = (a, b) => {
+    /*if (a < b) {
+        return true;
+    } else {
+        return false;
+    }*/
+    return a <= b;
+}
+console.log("Example 77 - Complete\n\tisLess : " + isLess(10, 15));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
+    Hint: Remember that undefined is a keyword, not a string
+*/
+const abTest = (a, b) => {
+    if (a < 0 || b < 0) {
+        return undefined;
+    }
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+console.log("Example 78 - Complete\n\tabTest : " + abTest(2, 2));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+                                Counting Cards
+    In the casino game Blackjack, a player can gain an advantage over the house by keeping track of the
+    relative number of high and low cards remaining in the deck. This is called Card Counting.
+    Having more high cards remaining in the deck favors the player. Each card is assigned a value according
+    to the table below. When the count is positive, the player should bet high. When the count is zero or 
+    negative, the player should bet low.
+          _________________________________________
+         |__Count_Change__|__________Cards_________|
+         |      +1        |      2, 3, 4, 5, 6     |
+         |       0        |         7, 8, 9        |
+         |______-1________|_10,_'J',_'Q',_'K',_'A'_|
+
+    You will write a card counting function. It will receive a card parameter, which can be a number or a string, 
+    and increment or decrement the global count variable to the card's value (see table). The function will then
+    return a string with the current count and the string Bet if the count is positive, or Hold if the count is
+    zero or negative. The current count and the player's decision (Bet or Hold) should be separated by a single space.
+        Example Output
+        -3 Hold
+        5 Bet
+    Hint: Do NOT reset count to 0 when value is 7, 8, 9.
+        : Do NOT return an array.
+        : Do NOT include quotes (single or double) in the output
+*/       
+var count = 0;
+const cc = (card) => {
+    var Bet = " Bet";
+    var Hold = " Hold";
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count += 1;
+            break;
+        case 7:
+        case 8:
+        case 9:
+            break;
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+            count -= 1;
+            break;
+        default:
+            return "Enter the correct Card Value!";
+    }
+    if (count > 0) {
+        return count + Bet;
+    } else {
+        return count + Hold;
+    }
+}
+console.log("Example 79 - Complete\n\tcc : " + cc(2) + "\n\t" + cc(3) + "\n\t" + cc(7) + "\n\t" +cc('K') + "\n\t" + cc('A'));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+        /*
+            Objects are similar to arrays, except that instead of using indexes to access
+            and modify their data, you access the data in objects through what are called
+            properties. Objects are useful for string data in a structured way, and can
+            represent real world objets, like a cat.
+        */
+
+
+/*
+    Make an object that represents a dog myDog which contains the properties "name" (a string), "legs",
+    "tails", and "friends".
+    You can set these object properties to whatever values you want, as long as "name" is a string, "legs"
+    and "tails" are numbers, and "friends" is an array.
+*/
+
+var myDog = {
+    "name": "Akamaru",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Humans", "Bones"]
+};
+console.log("Example 80 - Complete\n\tmyDog : " + myDog);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
