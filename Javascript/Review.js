@@ -1249,3 +1249,404 @@ console.log("Example 80 - Complete\n\tmyDog : " + myDog);
 
 /*-------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------*/
+
+            /*
+                There are two ways to access the porperties of an object: dot notation (.) and
+                bracket notation ([]), similar to an array.
+                Dot notation is what you use when you know the name of the property you're trying
+                to access ahead of time.
+            */
+/*
+    Read in the property values of testObj using dot notation. Set the variable hatValue equal to the
+    object's property hat and set te variable shirtValue equal to the object property shirt.
+*/
+
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+console.log("Example 81 - Complete\n\thatValue = " + hatValue + ", shirtValue = " + shirtValue);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+
+            /*
+                If the property of the object you are trying to access has a SPACE in its name,
+                you will need to use bracket notation.
+            */
+
+/*
+    Read the values of the properties "an entree" and "the drink" of testObj2 using bracket notation
+    and assign them to entreeValue and drinkValue repectively.
+*/
+var testObj2 = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+};
+
+var entreeValue = testObj2["an entree"];
+var drinkValue = testObj2["the drink"];
+console.log("Example 82 - Complete\n\tentreeValue = " + entreeValue + ", drinkValue = " + drinkValue);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Set the playerNumber variable to 16. Then, use the variable to look up the player's name and
+    assign it to player
+*/
+var testObj3 = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+
+var playerNumber = 16;
+var player = testObj3[playerNumber];
+console.log("Example 83 - Complete\n\tplayer = " + player);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Update the myDog2 object's name property. Let's change her name from "Coder" to "Happy Coder".
+    You can use it either dot or bracket notation.
+*/
+var myDog2 = {
+    "name": "Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Humans"]
+};
+myDog2.name = "Happy Coder";
+console.log("Example 84 - Complete\n\tmyDog2 = " + myDog2.name);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add "bark" property to myDog3 and set it to a dog sound, such as "woof". You may use either
+    dot or bracket notation.
+*/
+var myDog3 = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "Friends": ["Humans"]
+};
+myDog3.bark = "woof";
+console.log("Example 85 - Complete\n\tmyDog3 = " + myDog3.bark);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Delete the "tails" property from myDog4. You may use either dot or bracket notation.
+*/
+var myDog4 = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Humans"],
+    "bark": "woof"
+};
+delete myDog4.tails;
+console.log("Example 86 - Complete\n\tmyDog4 : " + myDog4.tails);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Convert the switch statement into an object called lookup. Use it to look up val and assign the
+    associated string to the result variable.
+*/
+const phoneticLookup = (val) => {
+    var result = "";
+
+    /*switch (val) {
+        case "alpha":
+            result = "Adams";
+            break;
+        case "bravo":
+            result = "Boston";
+            break;
+        case "charlie":
+            result = "Chicago";
+            break;
+        case "delta":
+            result = "Denver";
+            break;
+        case "echo":
+            result = "Easy";
+            break;
+        case "foxrot":
+            result = "Frank";
+            break;
+    }*/
+    var lookup = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxrot": "Frank"
+    };
+    result = lookup[val];
+    return result;
+}
+console.log("Example 87 - Complete\n\tphoneticLookup : " + phoneticLookup("charlie"));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Modify the function checkObj to test if an object passed to the function (obj) contains
+    a specific property (checkProp). If the property is found, return that property's value. If not,
+    return "Not Found"
+*/
+const checkObj = (obj, checkProp) => {
+    if (obj.hasOwnProperty(checkProp)) {
+        return obj[checkProp];
+    } else {
+        return "Not Found";
+    }
+}
+var lookup2 = {
+    gift: "pony",
+    pet: "kitten",
+    bed: "sleigh",
+    city: "Seattle"
+};
+console.log("Example 88 - Complete\n\tcheckObj : " + checkObj(lookup2, "bed"));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+        /*
+            Sometimes you may want to store data in a flexible Data Structure. A JavaScript
+            object is one way to handle flexible data. They allow arbitrary combinations of
+            strings, numbers, boolens, arrays, functions, and objects.
+        */
+/*
+    Add a new album to the myMusic array. Add artist and title strings, release_year number, and a
+    formats array of strings.
+*/
+var myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    },
+    {
+        "artist": "Eminem",
+        "title": "Not Afraid",
+        "release_year": 2010,
+        "formats": [
+            "MP3",
+            "CD"
+        ]
+    }
+];
+console.log("Example 89 - Complete\n\tmyMusic : " + myMusic[1].artist);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Access the myStorage object and assign the contents of the glove box property to the 
+    gloveBoxContents variable. Use dot notation for all properties where possible,
+    otherwise use bracket notation.
+*/
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log("Example 90 - Complete\n\tgloveBoxContents = " + gloveBoxContents);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Retrieve the second tree from the variable myPlants using object dot and array bracket notation.
+*/
+var myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees",
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
+var secondTree = myPlants[1].list[1];
+console.log("Example 91 - Complete\n\tsecondTree = " + secondTree);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+                                    Record Collection
+                    
+    You are given a JSON oject representing a part of your musical album collection. Each album has a
+    unique id number as its key and several other properties. Not all albums have complete information.
+    You start with an updateRecords function that takes an object like collection, an id, a prop (like 
+    artist or tracks), and a value. Complete the function using the rules below to modify the object 
+    passed to the funtion.
+        - Your function must always return the entire object.
+        - If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
+        - If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
+        - If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
+        - If value is an empty string, delete the given prop property from the album.
+    Note: A copy of the collection object is used for the tests.
+*/
+var collection = {
+    2548: {
+        albumTitle: 'Slippery When Wet',
+        artist: 'Bon Jovi',
+        tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    },
+    2468: {
+        albumTitle: '1999',
+        artist: 'Prince',
+        tracks: ['1999', 'Little Red Corvette']
+    },
+    1245: {
+        artist: 'Robert Palmer',
+        tracks: []
+    },
+    5439: {
+        albumTitle: 'ABBA Gold'
+    }
+};
+
+const updateRecords = (object, id, prop, value) => {
+    if (prop !== 'tracks' && value !== '') {
+        object[id][prop] = value;
+    } else if (prop == 'tracks' && object[id].hasOwnProperty('tracks') == false) {
+        var newTrack = [];
+        newTrack.push(value);
+        object[id][prop] = newTrack;
+    } else if (prop == 'tracks' && value !== '') {
+        object[id][prop].push(value);
+    } else if (value == '') {
+        delete object[id][prop];
+    } else {
+        return JSON.stringify(object);
+    }
+    return JSON.stringify(object);
+}
+
+console.log("Example 92 - Complete\n\tupdateRecord : " + updateRecords(collection, 5439, 'tracks', 'ABBA'));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Add the numbers 5 through 0 (inclusive) in descending order to myArray using a while loop
+*/
+var myArray10 = [];
+var i = 5;
+while (i >= 0) {
+    myArray10.push(i);
+    i--;
+}
+console.log("Example 93 - Complete\n\tmyArray10 : " + myArray10);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Use a for loop to work to push the values 1 through 5 onto myArray11
+*/
+var myArray11 = [];
+for (var x = 1; x <= 5; x++) {
+    myArray11.push(x);
+}
+console.log("Example 94 - Complete\n\tmyArray11 : " + myArray11);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Push the odd numbers from 1 through 9 to myArray12 using a for loop
+*/
+var myArray12 = [];
+for (var i = 1; i <= 9; i+=2) {
+    myArray12.push(i);
+}
+console.log("Example 95 - Complete\n\tmyArray12 : " + myArray12);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Push the odd numbers from 9 through 1 to myArray13 using a for loop
+*/
+var myArray13 = [];
+for (var i = 9; i >= 1; i -= 2) {
+    myArray13.push(i);
+}
+console.log("Example 96 - Complete\n\tmyArray13 : " + myArray13);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Declare and initialize a variable total to 0. Use a for loop to add the value for each element 
+    of the myArr2 array to total.
+*/
+var myArr2 = [2, 3, 4, 5, 6];
+var total = 0;
+for (var i = 0; i < myArr2.length; i++) {
+    total += myArr2[i];
+}
+console.log("Example 97 - Complete\n\ttotal = " + total);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Modify function multiplyAll so that it returns the product of all the numbers in the sub-arrays of arr
+*/
+const multiplyAll = (arr) => {
+    var product = 1;
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+    return product;
+}
+console.log("Example 98 - Complete\n\tmultiplyAll : " + multiplyAll([ [1,2], [3,4], [5,6,7] ]));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
