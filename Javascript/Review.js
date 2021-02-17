@@ -1650,3 +1650,232 @@ console.log("Example 98 - Complete\n\tmultiplyAll : " + multiplyAll([ [1,2], [3,
 
 /*-------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------*/
+
+/*
+    Change the while loop in the code to a do...while loop so the loop will push only the number
+    10 to myArray14, and i will be equal to 11 when your code has finished running
+*/
+var myArray14 = [];
+var i = 10;
+
+/*while (i < 5) {
+    myArray14.push(i);
+    i++;
+}*/
+do {
+    myArray14.push(i);
+    i++;
+} while (i < 5);
+console.log("Example 99 - Complete\n\tmyArray14 : " + myArray14 + ", i = " + i);
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+        /*
+            Recursion is the concept that a function can be expressed in terms of itself.
+        */
+/*
+    Write a recursive function, sum(arr, n), that returns the sum of the first n elements of an array arr.
+*/
+const sum2 = (arr, n) => {
+    if (n <= 0) {
+        return 0;
+    } else {
+        return sum2(arr, n-1) + arr[n-1];
+    }
+}
+var myArr3 = [2, 3, 4, 5, 6];
+console.log("Example 100 - Complete\n\tsum : " + sum2(myArr3, 3));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+                                        Profile Lookup
+    
+    We have an array of objects representing different people in our contacts lists. A lookUpProfile function
+    that takes name and a porperty (prop) as arguments has been pre-written for you. The funtion should check
+    if name is an actual contact's firstName and the given property (prop) is a property of that contact. If
+    both are true, then return the "value" of that property. If the name does not correspond to any contacts
+    then return "No such contact". If prop does not correspond to any valid properties of a contact found to
+    match name then return "No such property".
+*/
+
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+
+const lookUpProfile = (name, prop) => {
+    var i = 0;
+    var nameExist = false;
+    var propExist = false;
+    while (i < contacts.length) {
+        if (contacts[i].firstName == name && contacts[i].hasOwnProperty(prop) == true) {
+            return contacts[i][prop];
+        } else if (contacts[i].firstName == name) {
+            nameExist = true;
+        } else if (contacts[i].hasOwnProperty(prop) == true) {
+            propExist = true;
+        } else {
+            
+        }
+        i++;
+    }
+    if (nameExist == false) {
+        return "No such contact";
+    } else {
+        return "No such property";
+    }
+}
+
+console.log("Example 101 - Complete\n\tlookUpProfile : " + lookUpProfile("Kristian", "lastName"));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Change randomFraction to return a random number instead of returning 0.
+*/
+const randomFraction = () => {
+    return Math.random();
+}
+console.log("Example 102 - Complete\n\trandomFraction : " + randomFraction());
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Use this technique to generate and return a random whole number between 0 and 9.
+*/
+const randomWholeNum = () => {
+    return Math.floor(Math.random() * 10);
+}
+console.log("Example 103 - Complete\n\trandomWholeNum : " + randomWholeNum());
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Create a function called randomRange that takes a range myMin and myMax and returns a random whole
+    number that's greater than or equal to myMin, and is less than or equal to myMax, inclusive.
+*/
+const randomRange = (myMin, myMax) => {
+    return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+}
+console.log("Example 104 - Complete\n\trandomRange : " + randomRange(2, 6));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
+*/
+const convertToInteger = (str) => {
+    var CTI = parseInt(str);
+    return CTI;
+}
+console.log("Example 105 - Complete\n\tconvertToInteger : " + convertToInteger("56"));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Use parseInt() in the convertToInteger function so it converts a binary nubmer to an integer and returns it
+*/
+const convertToInteger2 = (str) => {
+    var CTI2 = parseInt(str, 2);
+    return CTI2;
+}
+console.log("Example 106 - Complete\n\tconverttoInteger2 : " + convertToInteger2("10011"));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    Use the conditional operator in the checkEqual function to check if two numbers are equal or not.
+    The function should return either "Equal" or "Not Equal".
+*/
+const checkEqual = (a, b) => {
+    return a == b ? "Equal" : "Not Equal";
+}
+console.log("Example 107 - Complete\n\tcheckEqual : " + checkEqual(1, 2));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    In the checkSign function, use multiple conditional operators - following the recommended format used in 
+    findGreaterOrEqual - to check if a number is positive, negative, or zero. The function should return
+    "positive", "negative", or "zero".
+*/
+const checkSign = (num) => {
+    return (num > 0) ? "positive" 
+        : (num < 0) ? "negative" 
+        : "zero";
+}
+console.log("Example 108 - Complete\n\tcheckSign : " + checkSign(10));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    We have defined a function called countdown with one parameter (n). The function should use recursion
+    to return an array containing the integers n through 1 based on the n parameter. If the function is
+    called with a number less than 1, the function should return an empty array. For example, calling this
+    function n = 5 should return the array [5, 4, 3, 2, 1]. Your function must use recursion by calling 
+    itself and must not use loops of any kind.
+*/
+const countdown = (n) => {
+    if (n < 1) {
+        return [];
+    } else {
+        const countArray = countdown(n-1);
+        countArray.unshift(n);
+        return countArray;
+    }
+}
+console.log("Example 109 - Complete\n\tcountdown : " + countdown(5));
+
+/*-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------*/
+
+/*
+    We have defined a function named rangeOfNumbers with two paramters. The function should return an 
+    array of integers which begins with a number represented by the startNum parameter and ends with
+    a number represented by the endNum parameter. The starting will always be less than or equal to 
+    the ending number. Your function must use recursion by calling itself and not use loops of any
+    kind. It should also work for cases where both startNum and endNum are the same.
+*/
+const rangeOfNumbers = (startNum, endNum) => {
+    if (startNum > endNum) {
+        return [];
+    } else {
+        const countArr = rangeOfNumbers(startNum + 1, endNum);
+        countArr.unshift(startNum);
+        return countArr;
+    }
+}
+console.log("Example 110 - Complete\n\trangeOfNumbers : " + rangeOfNumbers(4, 10));
