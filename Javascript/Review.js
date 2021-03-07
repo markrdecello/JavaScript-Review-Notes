@@ -1751,7 +1751,30 @@ const lookUpProfile = (name, prop) => {
     }
 }
 
+//for loop
+function lookUpProfile2(name, prop){
+        let c = 0;
+        let p = 0;
+        for (var i = 0; i < contacts.length; i++){
+            if (contacts[i].firstName == name && contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
+            }
+            if (contacts[i].firstName != name) {
+                c++;
+            }
+            if (!contacts[i].hasOwnProperty(prop)) {
+                p++;
+            }
+        }
+        if (c >= p) {
+            return "No such contact";
+        } else {
+            return ("No such property");
+        }
+    }
+
 console.log("Example 101 - Complete\n\tlookUpProfile : " + lookUpProfile("Kristian", "lastName"));
+console.log("Example 101 - Complete\n\tlookUpProfile2 : " + lookUpProfile2("Kristian", "lastName"));
 
 /*-------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------*/
@@ -1833,7 +1856,7 @@ console.log("Example 107 - Complete\n\tcheckEqual : " + checkEqual(1, 2));
 */
 const checkSign = (num) => {
     return (num > 0) ? "positive" 
-        : (num < 0) ? "negative" 
+    : (num < 0) ? "negative" 
         : "zero";
 }
 console.log("Example 108 - Complete\n\tcheckSign : " + checkSign(10));
