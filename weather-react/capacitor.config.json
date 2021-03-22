@@ -1,0 +1,8 @@
+{
+    "appId": "io.ionic.weather-react",
+    "appName": "nameofyourapp",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+  }
