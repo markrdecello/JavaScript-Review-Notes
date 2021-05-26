@@ -20,7 +20,7 @@ const solution = A => {
     let result = [];
     /*
      *  : Let's create a for loop to make sure each number in the array is a positive integer.
-     *  : if true, then we'll make the value of A[x] become an index of result[] and set the value to true
+     *  : if true, then we'll make the value of A[x] become an index/element of result[] and set the value to true
      */
     for (let x = 0; x < A.length; x++) {
         if (A[x] >= 0) {
@@ -35,7 +35,7 @@ const solution = A => {
      *  : The loop will be skipped if the numbers in the A array are all negative since result will be an empty array
      *      : x <= result.length
      *          : 1 <= 0
-     *  : Therefore, everytime all values are negative in the array, the function will always return 1
+     *  : Therefore, everytime all values are negative in the array, the function will always return 1 as the smallest positive integer
      */
     for (let x = 1; x <= result.length; x++) {
         if (result[x] == undefined) {
